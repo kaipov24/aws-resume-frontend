@@ -2,7 +2,6 @@
 
 This repository contains the **frontend** for my personal resume website — a fully serverless, secure, and scalable static site hosted on **Amazon S3**, distributed globally with **Amazon CloudFront**, and integrated with a real-time **visitor counter** powered by AWS Lambda, API Gateway, and DynamoDB.
 
-Backend branch
 [Backend branch](https://github.com/kaipov24/aws-resume-backend)
 ---
 
