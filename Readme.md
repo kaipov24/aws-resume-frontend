@@ -5,6 +5,7 @@ This repository contains the **frontend** for my personal resume website — a f
 [Backend branch](https://github.com/kaipov24/aws-resume-backend)
 ---
 
+
 ## 🧩 Architecture Overview
 
 | Component | Service | Description |
