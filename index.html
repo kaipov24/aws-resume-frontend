@@ -1,0 +1,21 @@
+<p id="visitor-count">Visitors: Loading...</p>
+
+<h1>Kaipov Kairat – Resume</h1><p>Hosted on AWS S3</p>
+
+
+<script>
+  async function updateVisitorCount() {
+    const apiUrl ="https://ylql7qtyqa.execute-api.eu-west-1.amazonaws.com/count";
+
+    try {
+      const response = await fetch(apiUrl);
+      const data = await response.json();
+      document.getElementById("visitor-count").textContent = `Visitors: ${data.visits}`;
+    } catch (error) {
+      console.error("Error fetching visitor count:", error);
+      document.getElementById("visitor-count").textContent = "Visitors: [Error]";
+    }
+  }
+
+  updateVisitorCount();
+</script>
