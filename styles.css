@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+:root {
+  --primary: #64dfdf;
+  --accent: #80ffdb;
+  --bg: #0f172a;
+  --text: #e2e8f0;
+  --font: "Poppins", sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  max-width: 850px;
+  padding: 2rem;
+}
+
+.counter-top {
+  text-align: right;
+  font-size: 0.9rem;
+  color: #94a3b8;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: var(--accent);
+  margin-bottom: 0.25rem;
+}
+
+.tagline {
+  color: var(--primary);
+  font-weight: 400;
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+}
+
+section {
+  margin-bottom: 2.5rem;
+}
+
+h2 {
+  color: var(--accent);
+  border-bottom: 1px solid var(--primary);
+  padding-bottom: 0.25rem;
+}
+
+h3 {
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+h4 {
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+  font-size: 1.05rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 1rem 0;
+}
+
+li {
+  margin: 0.4rem 0;
+}
+
+.project {
+  background: rgba(255, 255, 255, 0.04);
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  border-left: 3px solid var(--accent);
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: var(--primary);
+}
+
+footer {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+  color: #94a3b8;
+}
+
+.sublist {
+  margin-top: 0.3rem;
+  margin-left: 1.2rem;
+  list-style: circle;
+  opacity: 0.9;
+}
+
+.job ul li {
+  margin-bottom: 0.5rem;
+}
+
+.architecture {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.arch-diagram {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.arch-box {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 1rem;
+  min-width: 130px;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: var(--text);
+  transition: transform 0.2s ease;
+}
+
+.arch-box:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.arch-arrow {
+  font-size: 1.3rem;
+  opacity: 0.8;
+}
+
+.arch-arrow-down {
+  flex-basis: 100%;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.arch-note {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: #94a3b8;
+}
+
+.education {
+  margin-top: 3rem;
+}
+
+.edu-item {
+  background: rgba(255, 255, 255, 0.04);
+  padding: 1rem 1.5rem;
+  border-left: 3px solid var(--accent);
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.edu-item h3 {
+  color: var(--primary);
+  margin-bottom: 0.4rem;
+}
+
+.edu-item p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.location {
+  color: #94a3b8;
+  font-weight: 400;
+  font-size: 1rem;
+  margin-top: -0.25rem;
+  margin-bottom: 0.5rem;
+}

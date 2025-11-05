@@ -1,21 +1,257 @@
-<p id="visitor-count">Visitors: Loading...</p>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kaipov Kairat | DevOps & Cloud Engineer</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="counter-top">
+        👁️ Visitors: <span id="visitor-count">loading...</span>
+      </div>
 
-<h1>Kaipov Kairat – Resume</h1><p>Hosted on AWS S3</p>
+      <header>
+        <h1>Kaipov Kairat</h1>
+        <p class="location">📍 Bishkek, Kyrgyzstan</p>
+        <p class="tagline">Frontend Engineer → DevOps & Cloud Engineer</p>
+      </header>
+
+      <section class="about">
+        <p>
+          I’m a software engineer with over <strong>4 years of frontend experience</strong> at
+          <strong>Remote.com</strong>, building, scaling, and maintaining high-impact web experiences
+          for a global audience. My background bridges design systems, content platforms, and
+          performance optimization.
+        </p>
+        <p>
+          Recently, I’ve been expanding into <strong>DevOps and Cloud Engineering</strong> — bringing
+          my frontend experience into infrastructure, automation, and CI/CD. I love connecting UI
+          reliability with backend scalability and modern DevOps workflows.
+        </p>
+      </section>
+
+      <section class="skills">
+        <h2>Technical Skills & Certifications</h2>
+        <ul>
+          <li><strong>Cloud:</strong> AWS (Lambda, S3, CloudFront, Route 53, DynamoDB)</li>
+          <li><strong>DevOps:</strong> Terraform, Docker, GitHub Actions, Jenkins</li>
+          <li><strong>Frontend:</strong> React, Next.js, Styled Components, TypeScript</li>
+          <li><strong>Languages:</strong> JavaScript, Go, Python</li>
+          <li>
+            <strong>Certifications:</strong>
+            <a href="https://www.credly.com/users/kairat-kaipov" target="_blank"
+              >View on Credly</a
+            >
+          </li>
+        </ul>
+      </section>
+
+      <section class="experience">
+        <h2>Experience</h2>
+
+        <div class="job">
+          <h3>Growth Frontend Engineer · Remote.com (Nov 2020 - Apr 2025)</h3>
+          <ul>
+            <li>
+              Built and maintained core parts of the marketing website and blog, improving content
+              structure and user engagement.
+            </li>
+            <li>
+              Worked on implementing and updating website navigation to enhance user experience.
+            </li>
+            <li>
+              Contributed to CMS migrations:
+              <ul class="sublist">
+                <li>From a static site to Prismic for dynamic content management</li>
+                <li>From Prismic to Contentful to enable scalable, flexible content workflows</li>
+              </ul>
+            </li>
+            <li>
+              Developed reusable, responsive HubSpot email templates for global marketing campaigns
+              and A/B tests.
+            </li>
+            <li>
+              Created interactive cost calculators to help prospects estimate hiring and remote work
+              costs, driving engagement and lead conversions.
+            </li>
+            <li>
+              Implemented localization across UI components and content areas to support
+              multi-language experiences and international expansion.
+            </li>
+            <li>
+              Took part in building a design system from the ground up, delivering consistent,
+              scalable UI components aligned with brand and accessibility standards.
+            </li>
+            <li>
+              Collaborated with product, design, and marketing teams to rapidly build, test, and
+              iterate on growth-focused features and experiments.
+            </li>
+            <li>
+              Enhanced accessibility by developing components compatible with keyboard navigation and
+              screen readers.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="projects">
+        <h2>Projects</h2>
+
+        <div class="project">
+          <h3>🌐 AWS Serverless Resume Website & CI/CD Automation (this site)</h3>
+          <p>
+            This website demonstrates my full DevOps workflow — combining a static frontend,
+            automated infrastructure, and CI/CD. It runs entirely on <strong>AWS</strong> with zero
+            servers to manage.
+          </p>
+
+          <h4>Implementation Overview</h4>
+          <ul>
+            <li>
+              Built a responsive HTML/CSS/JS resume site hosted on <strong>Amazon S3</strong> with
+              global HTTPS delivery via <strong>CloudFront</strong>.
+            </li>
+            <li>
+              Implemented a visitor counter powered by <strong>API Gateway</strong> +
+              <strong>Lambda (Python)</strong> + <strong>DynamoDB</strong>.
+            </li>
+            <li>
+              Wrote backend logic in Python using <strong>boto3</strong> and secured with CORS.
+            </li>
+            <li>
+              Defined and deployed infrastructure using <strong>Terraform</strong> for full
+              reproducibility.
+            </li>
+            <li>
+              Automated deployments with <strong>GitHub Actions</strong>:
+              <ul class="sublist">
+                <li>
+                  Frontend workflow: syncs S3 bucket + invalidates CloudFront cache on every push
+                </li>
+                <li>
+                  Backend workflow: tests Python code, validates Terraform, and deploys AWS
+                  resources automatically
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <section class="architecture">
+            <h2>Project Architecture</h2>
+            <p>
+              The entire project is built using a <strong>serverless AWS architecture</strong>, ensuring high availability,
+              low cost, and zero maintenance overhead. Each service plays a key role in delivering this website.
+            </p>
+
+            <div class="arch-diagram">
+              <div class="arch-box">👨‍💻 You</div>
+              <div class="arch-arrow">➡️</div>
+              <div class="arch-box">🌍 CloudFront<br /><small>(CDN + HTTPS)</small></div>
+              <div class="arch-arrow">➡️</div>
+              <div class="arch-box">🪣 S3<br /><small>(Static Site)</small></div>
+
+              <div class="arch-arrow arch-arrow-down">⬇️</div>
+
+              <div class="arch-box">🧠 API Gateway<br /><small>(REST Endpoint)</small></div>
+              <div class="arch-arrow">➡️</div>
+              <div class="arch-box">🐍 Lambda<br /><small>(Python Function)</small></div>
+              <div class="arch-arrow">➡️</div>
+              <div class="arch-box">🗄️ DynamoDB<br /><small>(Visitor Counter DB)</small></div>
+            </div>
+
+            <p class="arch-note">
+              All infrastructure (S3, CloudFront, Lambda, API Gateway, DynamoDB) is defined using
+              <strong>Terraform</strong> and deployed automatically through
+              <strong>GitHub Actions</strong> pipelines.
+            </p>
+          </section>
+        </div>
+
+   
+        <div class="project">
+          <h3>🩸 Blood Donation Platform for Club 25 Kyrgyzstan</h3>
+          <p>
+            A community-driven web platform built for the volunteer organization
+            <strong>Club 25 Kyrgyzstan</strong> to promote and coordinate blood donation initiatives
+            across the country. The project empowers donors and volunteers by simplifying access to
+            donation events and awareness campaigns.
+          </p>
+
+          <h4>Implementation Overview</h4>
+          <ul>
+            <li>
+              Developed the platform using <strong>Next.js</strong> for fast, SEO-friendly rendering
+              and <strong>React-based</strong> interactivity.
+            </li>
+            <li>
+              Integrated <strong>Sanity CMS</strong> to allow non-technical volunteers to manage
+              content, event details, and donation posts easily.
+            </li>
+            <li>
+              Designed responsive UI with accessibility and multilingual support in mind.
+            </li>
+            <li>
+              Hosted and deployed on <strong>Vercel</strong> for scalability and seamless global delivery.
+            </li>
+            <li>
+              Collaborated with volunteer organizers to adapt the structure for local initiatives and
+              awareness campaigns.
+            </li>
+          </ul>
+
+          <p class="project-link">
+            🔗 <a href="https://blood-donation.kg" target="_blank">Visit blood-donation.kg</a>
+          </p>
+        </div>
 
 
-<script>
-  async function updateVisitorCount() {
-    const apiUrl ="https://ylql7qtyqa.execute-api.eu-west-1.amazonaws.com/count";
+      </section>
 
-    try {
-      const response = await fetch(apiUrl);
-      const data = await response.json();
-      document.getElementById("visitor-count").textContent = `Visitors: ${data.visits}`;
-    } catch (error) {
-      console.error("Error fetching visitor count:", error);
-      document.getElementById("visitor-count").textContent = "Visitors: [Error]";
-    }
-  }
+      <section class="education">
+        <h2>Education</h2>
 
-  updateVisitorCount();
-</script>
+        <div class="edu-item">
+          <h3>💻 EPAM Campus · Cloud & DevOps Program (Aug 2025 - Nov 2025)</h3>
+          <p>
+            Hands-on DevOps training focused on <strong>Docker, Ansible, Terraform, AWS, and CI/CD pipelines</strong>.
+            Completed real-world labs including container orchestration, configuration management, and infrastructure automation.
+          </p>
+        </div>
+
+        <div class="edu-item">
+          <h3>🚀 Boot.dev (May 2025 - Aug 2025)</h3>
+          <p>
+            Practical, project-based backend development and computer science education platform.
+            Completed advanced Python and Go tracks, building CLI tools and APIs from scratch.
+          </p>
+        </div>
+
+        <div class="edu-item">
+          <h3>🎓 University (Sep 2012 - Aug 2016)</h3>
+          <p>
+            Bachelor’s Degree in Computer Science  
+            <br />
+            <small>Focused on software engineering fundamentals, web technologies, and systems design.</small>
+          </p>
+        </div>
+
+      </section>
+
+      <section class="contact">
+        <h2>Connect</h2>
+        <p>
+          <a href="https://www.linkedin.com/in/kairat-kaipov24/" target="_blank">LinkedIn</a> ·
+          <a href="https://github.com/kaipov24" target="_blank">GitHub</a>
+        </p>
+      </section>
+
+      <footer>
+        <p>© <span id="year"></span> Kaipov Kairat</p>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
