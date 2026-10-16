@@ -82,6 +82,33 @@ li {
   border-left: 3px solid var(--accent);
 }
 
+.project summary {
+  cursor: pointer;
+  list-style: none;
+  color: var(--primary);
+  font-size: 1.17em;
+  font-weight: 600;
+}
+
+.project summary::-webkit-details-marker {
+  display: none;
+}
+
+.project summary::after {
+  content: "+";
+  float: right;
+  color: var(--accent);
+  font-size: 1.25rem;
+}
+
+.project[open] summary::after {
+  content: "−";
+}
+
+.project-content {
+  padding-top: 0.75rem;
+}
+
 a {
   color: var(--accent);
   text-decoration: none;
